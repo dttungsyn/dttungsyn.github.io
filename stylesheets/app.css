@@ -1,4 +1,3 @@
-@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 /* colors */
 /* ---------------------------------------------------------
  *	General
@@ -215,7 +214,7 @@ a:after {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .section {
-    padding: 70px 0;
+    padding: 70px 30px;
   }
   .section-title-border {
     margin: 0 auto 45px;
@@ -298,45 +297,7 @@ p.copyright {
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-/* ---------------------------------------------------------
- *	Pricing table
- * --------------------------------------------------------- */
-.pricing-table {
-  background: #fff;
-  text-align: center;
-  font-size: 14px;
-}
-.pricing-table .pricing-table-header {
-  background: #303131;
-  color: #fff !important;
-  padding: 18px 0;
-  margin: 0;
-  font-size: 18px;
-}
-.pricing-table .pricing-table-features {
-  list-style-type: none;
-  padding: 0;
-}
-.pricing-table .pricing-table-features li {
-  padding: 10px 0;
-  border-bottom: 1px solid #eff0f0;
-}
-.pricing-table .pricing-table-features .price {
-  font-weight: bold;
-  font-size: 52px;
-  padding: 30px 0;
-}
-.pricing-table .pricing-table-features .price sup {
-  font-size: 20px;
-  top: -20px;
-}
-.pricing-table .pricing-table-features .price sub {
-  font-size: 13px;
-  bottom: -2px;
-}
-.pricing-table .pricing-table-features .action {
-  padding: 20px 0;
-}
+
 /* ---------------------------------------------------------
  *	Vertical timeline
  * --------------------------------------------------------- */
@@ -627,7 +588,7 @@ p.copyright {
  *  --------------------------------------------------------- */
 @media (min-width: 1200px) {
   .container {
-    width: 1000px;
+    width: 80%;
   }
 }
 /*
