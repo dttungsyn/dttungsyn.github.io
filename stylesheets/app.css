@@ -55,7 +55,7 @@ p {
   font-size: 16px;
 }
 a {
-  color: #869198;
+  color: #599ED8;
   word-wrap: break-word;
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
   -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -68,7 +68,7 @@ ul {
 }
 a:hover,
 a:focus {
-  color: #99a2a9;
+  color: #8CB5D7;
   text-decoration: none;
   outline: 0;
 }
@@ -577,7 +577,7 @@ p.copyright {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 100;
 }
 /* ---------------------------------------------------------
@@ -588,7 +588,7 @@ p.copyright {
  *  --------------------------------------------------------- */
 @media (min-width: 1200px) {
   .container {
-    width: 80%;
+    width: 90%;
   }
 }
 /*
