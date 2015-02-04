@@ -1,0 +1,38 @@
+{
+	"About"		: {
+		"name"		: "Dang Thanh Tung",
+		"birthday"	: "1989-12-14",
+		"icons"		: {
+			"facebook"		: "",
+			"github"		: "",
+			"google-plus"	: "",
+			"linkedin"		: ""
+		},
+		"contents": {
+			"lead": "",
+			"paragraph": ["abcd", "efgh"]
+		},
+		"brief": "nice, kind"
+	},
+	"Timeline"	: {
+		"Education"	: [
+   		   {
+   			   "years"	: "2012-2013",
+   			   "title"	: "title",
+   			   "contents": ["", ""]
+   		   }
+		],
+		"Work"		: [],
+		"Activities": [],
+		"brief"		: ""
+	},
+	"Skills"	: {
+		"Programming"	: [],
+		"Languages"		: [],
+		"Technique"		: [],
+		"brief"			: ""
+	},
+	"Projects"	: {},
+	"Quotes"	: {"Take Advantages in any situations", ""},
+	"Contact"	: {}
+}

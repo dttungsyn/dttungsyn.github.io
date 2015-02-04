@@ -10,6 +10,16 @@
 	
 	myResumeServices.factory('myResumeData', function(utility){
 		return {
+			getResumeData: function(){
+				return $http.get('../contents.json');
+			},
+			getSections: function(){
+				return ['About', 'Tweets', 'Timeline', 'Skills', 'Projects'];
+			}
+		}
+		
+		/*
+		return {
 			getProfile : function() {
 				var profileData = {
 					title            : 'Dang Tung\'s Profile',
@@ -166,7 +176,7 @@
 				}
 				return technos;
 			}
-		};
+		};*/
 	});
 	
 	/**************************************

@@ -351,6 +351,7 @@ legend {
 	border: 1px solid;
 	border-radius: 5px;
 	background: rgba(74, 101, 140, 0.72);
+	position: relative;
 }
 
 .brief .profile-pic{
@@ -365,7 +366,7 @@ legend {
 	width: 441px;
 }
 
-legend {
+.brief legend {
 	display: block;
 	width: auto;
 	padding: 5px;
@@ -374,4 +375,82 @@ legend {
 	line-height: inherit;
 	color: #FFFFFF;
 	border: 0;
+}
+
+.brief .name{
+	position: absolute;
+	top: 45px;
+	left: 120px;
+	font-size: 24px;
+}
+
+.soc {
+    margin:0; padding:0;
+    list-style:none;
+    display:inline-block;
+    top: 5px;
+	position: relative;
+}
+
+.soc li {
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+}
+
+.soc li a {
+    font-style:normal;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+    overflow:hidden;
+    text-decoration:none;
+    text-align:center;
+    display:block;
+    position: relative;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    margin-right: 0px;
+    color: #ffffff;
+    background-color: #333;
+}
+
+.soc li a:hover {
+	z-index: 2;
+	-webkit-transform: scale(1.2) translateY(-3px);
+    transform: scale(1.2) translateY(-3px);
+}
+
+.soc-icon-last{
+    margin:0 !important;
+}
+
+.soc-twitter:hover {
+    background-color: #4da7de;
+}
+.soc-facebook:hover {
+    background-color: #3e5b98;
+}
+.soc-google:hover {
+    background-color: #d93e2d;
+}
+.soc-pinterest:hover {
+    background-color: #c92619;
+}
+.soc-linkedin:hover {
+    background-color: #3371b7;
+}
+.soc-github:hover {
+    background-color: orange;
 }
