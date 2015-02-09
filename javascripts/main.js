@@ -12,7 +12,8 @@ $(document).ready(function(){
 		$(".dial").knob();
 		
 		new WOW({
-	        mobile: false
+	        mobile: false,
+	        live: false
 	    }).init();
 		
 		$('.brief').affix({
