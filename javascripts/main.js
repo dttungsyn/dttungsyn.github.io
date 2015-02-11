@@ -16,6 +16,17 @@ $(document).ready(function(){
 	        live: false
 	    }).init();
 		
+		$(".rotate").textrotator({
+	        animation: "dissolve",
+	        separator: ",",
+	        speed: 5000
+	    });
+		
+		$(".twitterFeed").bxSlider({
+            nextText: ">",
+            prevText: "<"
+        });
+		
 		$('.brief').affix({
 		  offset: {
 		    top: $(window).height()

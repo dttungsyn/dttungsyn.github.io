@@ -12,37 +12,102 @@
 			"lead": "",
 			"paragraph": ["abcd", "efgh"]
 		},
-		"brief": "nice, kind, logical thinking, greate physical and mental strength"
+		"brief": "nice, kind, logical thinking, physical and mental strength"
 	},
+	
 	"Timeline"	: {
 		"Education"	: [
    		   {
    			   "years"	: "2004-2007",
-   			   "title"	: "Ha Noi - Amsterdam",
-   			   "contents": ["Computer science specialized class, where I was spending years to get start learning and solving algorithm problems, achieved some little awards in programming contest"]
+   			   "title"	: "Ha Noi - Amsterdam High School",
+   			   "contents": ["Computer science specialized class, where I got started with solving algorithm problems using Pascal, achieved some little awards in programming contest"]
    		   },
    		   {
    			   "years"	: "2007-2010",
-			   "title"	: "Bach Khoa Hanoi",
-			   "contents": [""]
+			   "title"	: "HaNoi University of Technology",
+			   "contents": ["Started with basic Japanese as major subject, Getting more advanced in Programming (C, linux) aim at making application, basic concepts about Computer Ethics, Software Development Cycle, and more complex theory such as Discrete Math, Cryptography, Electronic Circuit "]
    		   },
    		   {
    			   "years"	: "2010-2012",
-			   "title"	: "Keio University",
-			   "contents": [""]
+			   "title"	: "Keio University SFC",
+			   "contents": ["Research new Technology of Javascript, Css and HTML in making Semantic Web Application"]
    		   }
 		],
-		"Work"		: [],
-		"Activities": [],
+		
+		"Works"		: [{
+			"years"		: "2011-2012",
+			"title"		: "Part time job",
+			"contents"	: ["Working as internship part-time programmer in small venture Japanese companies"]
+		},{
+			"years"		: "2012-2015(current)",
+			"title"		: "FPT Software",
+			"contents"	: ["Software developer, Japanese Bridge Software Engineer"]
+		}],
+		
+		"Activities": [{
+			"years"		: "2010-2012",
+			"title"		: "Aikido Martial Arts",
+			"contents"	: ["Joined University's Aikido club, get started by training 2 times per week"]
+		}, {
+			"years"		: "2012",
+			"title"		: "Gakuvo Volunteer",
+			"contents"	: [""]
+		}],
 		"brief"		: ""
 	},
+	
 	"Skills"	: {
-		"Programming"	: [],
-		"Languages"		: [],
-		"Technique"		: [],
+		"Programming"	: [{
+			"key"	: "JavaScript Object Oriented, NodeJs, Java, C, PHP",
+			"val"	: "80"
+		},{
+			"key"	: "C#, Python, Ruby, HTML/CSS, Smartphone Application",
+			"val"	: "60"
+		},{
+			"key"	: "MongoDB, MYSQL, PostpreSQL",
+			"val"	: "70"
+		}],
+		
+		"Languages"	: [{
+			"key"	: "Vietnamese",
+			"val"	: "90",
+			"des"	: "Native"
+		},{
+			"key"	: "Japanese",
+			"val"	: "75",
+			"des"	: "Intermediate"
+		},{
+			"key"	: "English",
+			"val"	: "75",
+			"des"	: "Intermediate"
+		}],
+		
+		"Framework"		: ["Angularjs", "D3js", "jQuery", "Wordpress", "Meanio"],
+		
 		"brief"			: ""
 	},
-	"Projects"	: {},
-	"Quotes"	: {"Take Advantages in any situations", ""},
+	
+	"Projects"	: {
+		"main"	: [{
+			"name"	: "Codetube.vn",
+			"des"	: "The more sharing, the more gaining success",
+			"link"	: "http://codetube.vn",
+			"image"	: "",
+			"tags"	: []
+		},{
+			"name"	: "Time management",
+			"des"	: "Staff's working time management system",
+			"link"	: "",
+			"image"	: "",
+			"tags"	: []
+		}],
+		
+		"sub"	: [{
+			
+		}]
+	},
+	
+	"Quotes"	: ["Take Advantages in any situations.", "Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it.", "Success consists of going from failure to failure without loss of enthusiasm."],
+	
 	"Contact"	: {}
 }

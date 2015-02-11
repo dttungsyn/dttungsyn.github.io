@@ -8,143 +8,62 @@
 	* Data service
 	***************************************/
 	
-	myResumeServices.factory('myResumeData', function(utility){
+	myResumeServices.factory('myResumeData', function($http, utility){
+		
 		return {
 			getResumeData: function(){
-				return $http.get('../contents.json');
+				return $http.get('contents.json');
 			},
 			getSections: function(){
 				return ['About', 'Tweets', 'Timeline', 'Skills', 'Projects'];
+			},
+			getTimelineData: function(cb){
+				utility.getResumeData(function(ResumeData){
+					var timeline = {
+						data	: ResumeData.Timeline,
+						parts	: ["Education", "Works", "Activities"],
+						def		: {
+							"Education"	: {
+								"icon": "fa-graduation-cap"
+							},
+							"Works"		: {
+								"icon": "fa-paper-plane-o"
+							},
+							"Activities": {
+								"icon": "fa-graduation-cap"
+							},
+						}
+					}
+					cb(timeline);
+				});
+			},
+			getSkillData: function(cb){
+				utility.getResumeData(function(ResumeData){
+					var skills = ResumeData.Skills;
+					skills.Languages.colors = ["#869198", "#66CC66", "#86CDEA"];
+					cb(skills);
+				});
+			},
+			getProjectData: function(cb){
+				utility.getResumeData(function(ResumeData){
+					
+				});
+			},
+			getCountData: function(cb){
+				utility.getResumeData(function(ResumeData){
+					
+				});
+			},
+			getTweetsData: function(cb){
+				utility.getResumeData(function(ResumeData){
+					var tweets = ResumeData.Quotes;
+					cb(tweets);
+				});
 			}
 		}
 		
 		/*
-		return {
-			getProfile : function() {
-				var profileData = {
-					title            : 'Dang Tung\'s Profile',
-					name             : 'Dang Thanh Tung',
-					birthDate        : '14/12/1989',
-					startWorkingDate : '01/03/2012',
-					experience       : "$1 ans, $2 ans d'expérience",
-					roles			 : [ 'Web Developer', 'System Engineer', 'UI Designer' ]
-				};
-				var age = utility.getDurationInYears(false, profileData.birthDate);
-				var workExperience = utility.getDurationInYears(true, profileData.startWorkingDate);
-				var experience = utility.replaceParameters(profileData.experience, [age, workExperience]);
-				var profile = {
-					title      : profileData.title,
-					name  	   : profileData.name,
-					experience : experience
-				};
-				return profile;
-			},
-			getTagCloud : function() {
-				var tagCloud = [
-					{label:'HTML5', level:0}, {label:'AJAX', level:1}, {label:'Java/J2EE', level:2}, {label:'CSS3', level:0}, {label:'SONAR', level:0}, 
-					{label:'CSS', level:0}, {label:'Shell', level:1}, {label:'Scrum', level:2}, {label:'Unix', level:0}, {label:'SQL', level:1}, {label:'REST', level:0},
-					{label:'Javascript', level:1}, {label:'JQuery', level:2}, {label:'Tomcat', level:0}, {label:'Oracle', level:0}, {label:'AngularJS', level:0}, {label:'JSON', level:1},
-					{label:'Spring', level:2}, {label:'JSP', level:0}, {label:'Maven', level:2}, {label:'UML', level:0}, {label:'Apache', level:1}, {label:'TDD', level:1}
-				];
-				return tagCloud;
-			},
-			getSkills : function() {
-				var skills = [
-					{
-					 title:'Web',
-					 specificSkills:['JAVA/J2EE (JSP, Spring, JSF)', 'REST', 'Javascript', 'JQuery', 'AJAX', 'JSON', 'HTML5', 'CSS3', 'AngularJS', 'Twitter Bootstrap', 'LESS', 'PHP', 'Velocity', 'Mustache', 'Extjs', 'Joomla', 'Webpshere Portal']
-					},
-					{
-					 title:'Langages et outils',
-					 specificSkills:['JAVA', 'Spring', 'Junit', 'Hibernate/JDBC', 'Maven', 'Eclipse', 'Jenkins', 'Sonar', 'Jira', 'Bazaar', 'CVS', 'SVN', 'Git', 'Jmeter', 'Selenium', 'Fitnesse', 'Quality Center', 'Clearcase', 'Clearquest', 'shell Unix']
-					},
-					{
-					 title:'Serveurs',
-					 specificSkills:['Apache', 'Tomcat', 'Jboss', 'NodeJS (lab)']
-					},
-					{
-					 title:'Base de donnees',
-					 specificSkills:['Oracle', 'MySql', 'SQL', 'PL/SQL', 'PL/SQL Developer']
-					},
-					{
-					 title:'Méthodologies ',
-					 specificSkills:['Agile Scrum', 'TDD', 'XP', 'Merise', 'UML']
-					},
-					{
-					 title:'Systèmes',
-					 specificSkills:['Windows', 'Linux Debian']
-					}
-				];
-				return skills;
-			},
-			getHobbies : function() {
-				var hobbies = {
-					hobby1 : {
-						title : 'Sport',
-						desc1 : 'Adepte du sport et plus particulièrement du football, je pratique cette discipline en club depuis mon plus jeune âge.',
-						desc2 : 'J\'ai également entrainé une équipe de jeunes ainsi que l\'équipe de mon école Polytech\' qui a remporté cette année là le tournoi inter Polytech.'
-					},
-					hobby2 : {
-						title : 'Voyage',
-						desc1 : 'De nature curieux, je voyage régulièrement dans le but de découvrir de nouvelles cultures.',
-						desc2 : 'J\'ai notamment été fasciné par mes séjours en Asie du Sud (Hong-Kong, Malaisie, Singapour, Thailande, Sri-Lanka).'
-					},
-					hobby3 : {
-						title : 'Art',
-						desc1 : 'Je me passionne pour les arts modernes et les arts urbains. Je vais régulièrement voir des expositions (Warhol, Dali, Keith Haring, Banksy ...).',
-						desc2 : 'De plus j\'assiste à des représentations théâtrales, les comédies de boulevard me plaisent particulièrement.'
-					}
-				};
-				return hobbies;
-			},
-			getContact : function() {
-				var contact = {
-					form : {
-						error   : 'Erreur lors de l\'envoi de l\'email. Veuillez réessayer.',
-						name    : 'Nom',
-						email   : 'Email',
-						message : 'Message',
-						send    : 'Envoyer',
-						confirm : {
-							part1 : 'Merci pour votre message !',
-							part2 : 'A bientôt',
-							back  : 'Retour au formulaire »'
-						}
-					},
-					address : {
-						city    : 'Paris',
-						zipCode : '75005',
-						email   : 'nicolas.huguet34[@]gmail.com'
-					}
-				};
-				return contact;
-			},
-			getNavigation : function(){
-				var nav = {
-					profile : 'Profil',
-					skills  : 'Competences',
-					career  : 'Experience',
-					hobbies : 'Hobbies',
-					contact : 'Contact'
-				};
-				return nav;
-			},
-			getTimeline : function(){
-				var timeline = {
-					lang    : 'fr',
-					content : 'https://docs.google.com/spreadsheet/pub?key=0Aj1DRa-P1mk8dExmZUxzY2VzbzFUWm1jMnZJS09oZ0E&output=html' 
-				}
-				return timeline;
-			},
-			getLinks : function(){
-				var links = {
-					github   : 'https://github.com/nicolest',
-					linkedin : 'http://fr.linkedin.com/pub/nicolas-huguet/42/544/851',
-					twitter  : 'https://twitter.com/NicolasHuguet',
-					resume   : '/data/nicolas_huguet_cv.pdf'
-				}
-				return links;
-			},
+		
 			getTechnos : function(){
 				var technos = {
 					img : [
@@ -216,7 +135,8 @@
 	* Utility service
 	***************************************/
 	
-	myResumeServices.factory('utility', function(){
+	myResumeServices.factory('utility', function($http){
+		var ResumeData = null;
 		return {
 			contains : function(value1, value2){
 				return MY_RESUME.contains(value1, value2);
@@ -226,6 +146,14 @@
 			},
 			replaceParameters : function(string, values){
 				return MY_RESUME.replaceParameters(string, values);
+			},
+			getResumeData: function(cb){
+				if (ResumeData != null) cb(ResumeData);
+				$http.get('contents.json').success(function(data){
+					ResumeData = data;
+					console.log("Resume Data loaded!");
+					cb(data);
+				})
 			}
 		};
 	});

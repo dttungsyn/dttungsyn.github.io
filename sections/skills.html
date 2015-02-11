@@ -7,99 +7,66 @@
     </div>
     <div class="row personal-skills">
         <div class="col-sm-8 wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0s">
-            <h4>Maecenas laoreet</h4>
+            <h4>Programming</h4>
+            <h6 ng-repeat-start="item in skills.Programming">{{item.key}}</h6>
+            <div class="progress" ng-repeat-end>
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{item.val}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.val}}%;">
+                    {{item.val}}%
+                </div>
+            </div>
+            <!--
             <h6>Aliquam sit amet</h6>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="width: 92%;">
-                    92%
-                </div>
-            </div>
-            <h6>Donec ut mollis</h6>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                    86%
-                </div>
-            </div>
-            <h6>Sed augue</h6>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;">
-                    78%
-                </div>
-            </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="width: 92%;">
+                                92%
+                            </div>
+                        </div>
+                        <h6>Donec ut mollis</h6>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
+                                86%
+                            </div>
+                        </div>
+                        <h6>Sed augue</h6>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;">
+                                78%
+                            </div>
+                        </div>-->
+            
         </div>
         <div class="col-sm-4 wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0s">
-            <h4>Knowledge</h4>
+            <h4>Framework</h4>
             <ul class="fa-ul skills-ul">
-              <li><i class="fa-li fa fa-check"></i>Nullam at fringilla</li>
-              <li><i class="fa-li fa fa-check"></i>Etiam nec convallis</li>
-              <li><i class="fa-li fa fa-check"></i>Vivamus at purus</li>
-              <li><i class="fa-li fa fa-check"></i>Curabitur ante justo</li>
-              <li><i class="fa-li fa fa-check"></i>Aenean efficitur elit</li>
+              <li data-ng-repeat="item in skills.Framework">
+                  <i class="fa-li fa fa-check"></i>{{item}}
+              </li>
             </ul>                       
         </div>
     </div>
     <div class="row personal-skills">
         <div class="col-sm-8 wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.4s">
             <h4>Languages</h4>
-            <div class="lang-container">
-                <input type="text" value="100" class="dial" 
+            <div class="lang-container" data-ng-repeat="item in skills.Languages">
+                <input type="text" value="{{item.val}}" class="dial" 
                     data-width="100"
                     data-height="100"
-                    data-fgColor="#869198"
+                    data-fgColor="{{skills.Languages.colors[$index]}}"
                     data-skin="tron"
                     data-thickness=".2"
                     data-displayPrevious=true
                     data-readOnly=true>
-                <p class="lang-description">English</p>
-                <span class="lang-level">native</span>
+                <p class="lang-description">{{item.key}}</p>
+                <span class="lang-level">{{item.des}}</span>
             </div>
-            
-            <div class="lang-container">
-                <input type="text" value="80" class="dial" 
-                    data-width="100"
-                    data-height="100"
-                    data-fgColor="#869198"
-                    data-skin="tron"
-                    data-thickness=".2"
-                    data-displayPrevious=true
-                    data-readOnly=true>
-                <p class="lang-description">Spanish</p>
-                <span class="lang-level">advanced</span>
-            </div>
-            
-            <div class="lang-container">
-                <input type="text" value="60" class="dial" 
-                    data-width="100"
-                    data-height="100"
-                    data-fgColor="#66CC66"
-                    data-skin="tron"
-                    data-thickness=".2"
-                    data-displayPrevious=true
-                    data-readOnly=true
-                    data-bgColor="#fff">
-                <p class="lang-description">German</p>
-                <span class="lang-level">intermediate</span>
-            </div>
-            
-            <div class="lang-container">
-                <input type="text" value="25" class="dial" 
-                    data-width="100"
-                    data-height="100"
-                    data-skin="tron"
-                    data-thickness=".2"
-                    data-displayPrevious=true
-                    data-readOnly=true
-                    data-bgColor="#fff">
-                <p class="lang-description">French</p>
-                <span class="lang-level">basic</span>
-            </div>
+
         </div>
         <div class="col-sm-4 wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.1s">
-            <h4>Hobies</h4>
+            <h4>Knowledge</h4>
             <ul class="fa-ul skills-ul">
-              <li><i class="fa-li fa fa-camera"></i>Nullam at fringilla</li>
-              <li><i class="fa-li fa fa-plane"></i>Etiam nec convallis</li>
-              <li><i class="fa-li fa fa-music"></i>Vivamus at purus</li>
+              <li><i class="fa-li fa fa-camera"></i>Agile</li>
+              <li><i class="fa-li fa fa-plane"></i>Scrum</li>
+              <li><i class="fa-li fa fa-music"></i>Waterfall</li>
             </ul>   
         </div>
     </div>

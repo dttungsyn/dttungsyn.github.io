@@ -15,7 +15,7 @@
 	
 	myResume.controller('ResumeCtrl', function($scope, myResumeData){
 		
-		// Data mangement
+		// Sections definition
 		$scope.sectionDef = {
 			'about'	: {
 				'class': 'section-solid'
@@ -27,7 +27,29 @@
 				'class': 'projects'
 			}
 		}
-		$scope.sections = ['about', 'tweets', 'timeline', 'skills', 'projects', 'facts', 'contact']
+		$scope.sections = ['about', 'tweets', 'timeline', 'skills', 'projects', 'facts', 'contact'];
+		
+		myResumeData.getResumeData().success(function(data){
+			//console.log(data);
+			//$scope.timeline = data.Timeline;
+		});
+		
+		/*
+		 * Timeline
+		 */
+		myResumeData.getTimelineData(function(data){
+			$scope.timeline = data;
+		})
+		
+		myResumeData.getSkillData(function(data){
+			console.log(data);
+			$scope.skills = data;
+		})
+		
+		myResumeData.getTweetsData(function(data){
+			console.log(data);
+			$scope.tweets = data;
+		})
 	});
 	
 })();

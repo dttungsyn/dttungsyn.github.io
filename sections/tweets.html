@@ -2,7 +2,11 @@
     <div class="row">
         <div class="col-sm-12 text-center wow fadeInDown" data-wow-duration="0.7s" data-wow-delay="0s">
             <i class="fa fa-twitter twitter-feed-icon"></i>
-            <span id="twitterFeed1"></span>
+            <span id="twitterFeed1">
+                <ul class="twitterFeed">
+                    <li data-ng-repeat="tweet in tweets">{{tweet}}</li>
+                </ul>
+            </span>
         </div>
     </div>
 </div>

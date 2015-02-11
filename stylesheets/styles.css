@@ -386,12 +386,12 @@ legend {
 	font-size: 20px;
 	color: rgba(155, 184, 224, 0.5);
 	font-style: italic;
+	transition: 2s;
+	-webkit-transition: 2s;
 }
 
 .brief .name:hover{
 	color: white;
-	transition: 2s;
-	-webkit-transition: 2s;
 }
 
 .soc {
