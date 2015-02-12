@@ -12,7 +12,7 @@
 			"lead": "",
 			"paragraph": ["abcd", "efgh"]
 		},
-		"brief": "nice, kind, logical thinking, physical and mental strength"
+		"brief": "Logical thinking, physical and mental strength, dedicated to society, loving self-challenge by being creative, non-stop looking for new & useful things"
 	},
 	
 	"Timeline"	: {
@@ -53,7 +53,7 @@
 			"title"		: "Gakuvo Volunteer",
 			"contents"	: [""]
 		}],
-		"brief"		: ""
+		"brief"		: "Ha Noi - Amsterdam High School, HaNoi University of Technology, Keio University SFC, Japanese IT"
 	},
 	
 	"Skills"	: {
@@ -82,9 +82,9 @@
 			"des"	: "Intermediate"
 		}],
 		
-		"Framework"		: ["Angularjs", "D3js", "jQuery", "Wordpress", "Meanio"],
+		"Framework"		: ["Angularjs", "D3js", "jQuery", "Firebase", "Wordpress", "Meanio"],
 		
-		"brief"			: ""
+		"brief"			: "High level coding of Javascript, Nodejs, Java, Php, familiar with Angular, D3js, jQuery, Wordpress, MongoDB, Mysql. Normally use of Japanese and English."
 	},
 	
 	"Projects"	: {
@@ -104,10 +104,17 @@
 		
 		"sub"	: [{
 			
-		}]
+		}],
+		
+		"brief"	: "Codetube.vn, Time management system"
 	},
 	
-	"Quotes"	: ["Take Advantages in any situations.", "Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it.", "Success consists of going from failure to failure without loss of enthusiasm."],
+	"Quotes"	: ["Take Advantages in any situations.", 
+	        	   "Always be yourself, express yourself, have faith in yourself, do not go out and look for a non-sense personality and duplicate it.", 
+	        	   "Success consists of going from failure to failure without loss of enthusiasm.",
+	        	   "Dedicated any from your tiny knowledge and make a huge impact to the country"],
 	
-	"Contact"	: {}
+	"Contact"	: { 
+		"brief"	: "I want to be trained in a more tough-level of technical environment. If you have it, it's worth to give a try."
+	}
 }

@@ -15,7 +15,7 @@
 				return $http.get('contents.json');
 			},
 			getSections: function(){
-				return ['About', 'Tweets', 'Timeline', 'Skills', 'Projects'];
+				return ['about', 'tweets', 'timeline', 'skills', 'projects', 'facts', 'contact'];
 			},
 			getTimelineData: function(cb){
 				utility.getResumeData(function(ResumeData){
@@ -40,7 +40,7 @@
 			getSkillData: function(cb){
 				utility.getResumeData(function(ResumeData){
 					var skills = ResumeData.Skills;
-					skills.Languages.colors = ["#869198", "#66CC66", "#86CDEA"];
+					skills.Languages.colors = ["#869198", "#66CC66", "#86CDEA"];	//TODO better
 					cb(skills);
 				});
 			},
@@ -58,6 +58,21 @@
 				utility.getResumeData(function(ResumeData){
 					var tweets = ResumeData.Quotes;
 					cb(tweets);
+				});
+			},
+			getBriefData: function(cb){
+				var briefdata = {
+					"sections"	: ["about", "timeline", "skills", "projects", "contact"],
+					"contents"	: {}
+				}
+				
+				utility.getResumeData(function(ResumeData){
+					for (var i in briefdata.sections){
+						var section = briefdata.sections[i];
+						briefdata.contents[ section ] = ResumeData[ section ].brief;
+					}
+					
+					cb( briefdata );
 				});
 			}
 		}

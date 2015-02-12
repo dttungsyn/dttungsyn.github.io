@@ -27,7 +27,7 @@
 				'class': 'projects'
 			}
 		}
-		$scope.sections = ['about', 'tweets', 'timeline', 'skills', 'projects', 'facts', 'contact'];
+		$scope.sections = myResumeData.getSections;
 		
 		myResumeData.getResumeData().success(function(data){
 			//console.log(data);
@@ -42,13 +42,15 @@
 		})
 		
 		myResumeData.getSkillData(function(data){
-			console.log(data);
 			$scope.skills = data;
 		})
 		
 		myResumeData.getTweetsData(function(data){
-			console.log(data);
 			$scope.tweets = data;
+		})
+		
+		myResumeData.getBriefData(function(data){
+			console.log(data);
 		})
 	});
 	
