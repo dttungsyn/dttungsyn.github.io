@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Profile</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="stylesheets/app.css" />
+<link rel="stylesheet" href="stylesheets/styles.css" />
+
+<style>
+    
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+</style>
+
+</head>
+<body data-ng-app="myResumeApp" data-ng-controller="ResumeCtrl">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=251619061676411&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<section class="main" id="home" data-ng-include="'sections/home.html'">
+</section>
+	
+<div class="row">
+
+  <div class="col-md-3">
+    <fieldset class="brief">
+    	<legend>
+    		<img src="images/profile_.png" class="profile-pic" />
+    		<span class="soc">
+    		    <li><a class="soc-linkedin soc-icon-last fa fa-linkedin" href="#"></a></li>
+                <li><a class="soc-github fa fa-github" href="#"></a></li>
+                <li><a class="soc-facebook fa fa-facebook" href="#"></a></li>
+                <li><a class="soc-twitter fa fa-twitter" href="#"></a></li>
+                <li><a class="soc-google soc-icon-last fa fa-google-plus" href="#"></a></li>
+            </span>
+    	</legend>
+    	
+		<h2 class="name">Dang Thanh Tung</h2>
+		<span>Software Developer</span>
+		
+		<section class="brief-section" du-scrollspy="{{section}}" data-ng-repeat="section in briefData.sections">
+			<span><a class="brief-title" href="#{{section}}" du-smooth-scroll>{{section}}</a></span>:
+    		<span class="brief-content">{{ briefData.contents[section] }}</span>
+		</section>
+		
+  	</fieldset>
+  </div>
+  
+  <div class="col-md-9 all-contents">
+  
+	
+	<section id="{{section}}" class="section {{ sectionDef[section].class }}" 
+	   data-ng-repeat="section in sections" data-ng-include="'sections/' + section + '.html'" ></section>
+	
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.11/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/0.6.4/angular-scroll.js"></script>
+
+<script src="lib/jquery.knob.min.js"></script>
+<script src="lib/wow.js"></script>
+<script src="lib/jquery.backstretch.min.js"></script>
+<script src="lib/jquery.simple-text-rotator.min.js"></script>
+<script src="lib/jquery.bxslider.min.js"></script>
+
+<script src="javascripts/main.js"></script>
+<script src="javascripts/services.js"></script>
+<script src="javascripts/app.js"></script>
+
+</body>
+</html>

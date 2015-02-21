@@ -1,16 +1,16 @@
 <div class="container">
-    <h2 class="heading">PROJECTS</h2>
-    <p>Intrinsicly mesh corporate partnerships with synergistic leadership skills. Uniquely negotiate high-payoff potentialities before premium niches. Progressively cultivate functional platforms after focused processes. Assertively supply emerging metrics before out-of-the-box internal or "organic".</p>
+    <h2 class="heading wow fadeInLeft">PROJECTS</h2>
+    <p class="wow fadeInLeft">{{projectData.description}}</p>
     <div class="row project-list">
         <ul class="project-grid project-effect-shrink">
-            <li class="col-md-6">
+            <li class="col-md-6 wow fadeInLeft" data-ng-repeat="mproj in projectData.main">
                 <figure>
-                    <img src="images/big-thing-landing-page.png" alt="Big Thing Landing Page">
+                    <img src="{{mproj.image}}" alt="Big Thing Landing Page">
                     <figcaption>
                         <div class="project-item-info">
-                            <h3 class="sub-heading">Big Thing Landing Page</h3>
-                            <p>Progressively pursue visionary functionalities through vertical ROI. Uniquely unleash alternative experiences vis-a-vis.</p>
-                            <a href="#" class="btn btn-default">View Details</a>
+                            <h3 class="sub-heading">{{mproj.name}}</h3>
+                            <p>{{mproj.des}}</p>
+                            <a href="{{mproj.link}}" class="btn btn-default">View Details</a>
                         </div>
                     </figcaption>
                 </figure>

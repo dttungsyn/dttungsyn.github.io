@@ -88,9 +88,10 @@
 	},
 	
 	"Projects"	: {
+		"description": "I am working on projects that aim at building something useful for many users on internet. These are a few of them and there are more lot of works to do. ",
 		"main"	: [{
 			"name"	: "Codetube.vn",
-			"des"	: "The more sharing, the more gaining success",
+			"des"	: "Building a good and convinient environment for seeking and sharing IT knowledges - The more sharing, the more gaining success",
 			"link"	: "http://codetube.vn",
 			"image"	: "",
 			"tags"	: []
@@ -112,7 +113,7 @@
 	"Quotes"	: ["Take Advantages in any situations.", 
 	        	   "Always be yourself, express yourself, have faith in yourself, do not go out and look for a non-sense personality and duplicate it.", 
 	        	   "Success consists of going from failure to failure without loss of enthusiasm.",
-	        	   "Dedicated any from your tiny knowledge and make a huge impact to the country"],
+	        	   "Dedicated any start from your tiny knowledge and make a huge impact to the commnunity"],
 	
 	"Contact"	: { 
 		"brief"	: "I want to be trained in a more tough-level of technical environment. If you have it, it's worth to give a try."
